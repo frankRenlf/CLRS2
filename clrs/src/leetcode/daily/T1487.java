@@ -18,27 +18,31 @@ import java.util.Map;
  */
 public class T1487 {
     public String[] getFolderNames(String[] names) {
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> index = new HashMap<String, Integer>();
         int n = names.length;
-        String[] str = new String[n];
+        String[] res = new String[n];
         for (int i = 0; i < n; i++) {
             String name = names[i];
-            int k = 0;
-            if (name.contains("(")) {
-                System.out.println();
-                k = Integer.parseInt(name.substring(name.indexOf("(") + 1, name.length() - 1));
-                name = name.substring(0, name.indexOf("(") - 1);
-            }
-            if (map.containsKey(name)) {
-                map.put(name, map.get(name) + 1);
-                str[i] = name + "(" + map.get(name) + ")";
+            if (!index.containsKey(name)) {
+                res[i] = name;
+                index.put(name, 1);
             } else {
-                map.put(name, k);
-                str[i] = name;
+                int k = index.get(name);
+                while (index.containsKey(addSuffix(name, k))) {
+                    k++;
+                }
+                res[i] = addSuffix(name, k);
+                index.put(name, k + 1);
+                index.put(addSuffix(name, k), 1);
             }
         }
-        return str;
+        return res;
     }
+
+    public String addSuffix(String name, int k) {
+        return name + "(" + k + ")";
+    }
+
     static T1487 t1487 = new T1487();
 
     public static void main(String[] args) {
