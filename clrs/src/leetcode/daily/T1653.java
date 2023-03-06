@@ -28,7 +28,7 @@ public class T1653 {
             } else if (s.charAt(i) == 'b') {
                 leftb++;
             }
-            res = Math.min(leftb, righta);
+            res = Math.min(res, leftb + righta);
         }
         return res;
     }
