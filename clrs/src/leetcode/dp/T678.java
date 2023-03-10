@@ -1,5 +1,9 @@
 package leetcode.dp;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Queue;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -14,6 +18,31 @@ package leetcode.dp;
  */
 public class T678 {
     public boolean checkValidString(String s) {
-        
+        int n = s.length();
+        Deque<Integer> left = new ArrayDeque<>();
+        Deque<Integer> astar = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            if (s.charAt(i) == '(') {
+                left.push(i);
+            } else if (s.charAt(i) == '*') {
+                astar.push(i);
+            } else {
+                if (!left.isEmpty()) {
+                    left.pop();
+                } else if (!astar.isEmpty()) {
+                    astar.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+        while (!left.isEmpty() && !astar.isEmpty()) {
+            int leftIndex = left.pop();
+            int astarIndex = astar.pop();
+            if (leftIndex > astarIndex) {
+                return false;
+            }
+        }
+        return left.isEmpty();
     }
 }
