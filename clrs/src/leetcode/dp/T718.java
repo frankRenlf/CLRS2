@@ -17,12 +17,18 @@ public class T718 {
         int n = A.length, m = B.length;
         int[][] dp = new int[n + 1][m + 1];
         int ans = 0;
-        for (int i = n - 1; i >= 0; i--) {
-            for (int j = m - 1; j >= 0; j--) {
-                dp[i][j] = A[i] == B[j] ? dp[i + 1][j + 1] + 1 : 0;
-                ans = Math.max(ans, dp[i][j]);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                dp[i + 1][j + 1] = A[i] == B[j] ? dp[i][j] + 1 : 0;
+                ans = Math.max(ans, dp[i + 1][j + 1]);
             }
         }
+//        for (int i = n - 1; i >= 0; i--) {
+//            for (int j = m - 1; j >= 0; j--) {
+//                dp[i][j] = A[i] == B[j] ? dp[i + 1][j + 1] + 1 : 0;
+//                ans = Math.max(ans, dp[i][j]);
+//            }
+//        }
         return ans;
     }
 }
