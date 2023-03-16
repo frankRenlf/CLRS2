@@ -12,7 +12,7 @@ import java.util.Map;
  * @Package : leetcode.dp
  * @createTime : 2023/3/16 10:54
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
+ * @github : <a href="https://github.com/frankRenlf">...</a>
  * @Description :
  */
 public class T2488 {
