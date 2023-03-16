@@ -18,6 +18,7 @@ import java.util.Map;
 public class T2488 {
 
     public int countSubarrays(int[] nums, int k) {
+
         int pos = 0, n = nums.length;
         while (nums[pos] != k) ++pos;
 
@@ -36,6 +37,7 @@ public class T2488 {
             ans += cnt.getOrDefault(x, 0) + cnt.getOrDefault(x - 1, 0);
         }
         return ans;
+
     }
 
 
