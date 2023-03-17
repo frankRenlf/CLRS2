@@ -22,8 +22,8 @@ public class T2389 {
         for (int i = 0; i < n; i++) {
             pre[i + 1] = pre[i] + nums[i];
         }
-        int[] ans = new int[n];
-        int m=queries.length;
+        int m = queries.length;
+        int[] ans = new int[m];
         for (int i = 0; i < m; i++) {
             ans[i] = binarySearch(pre, queries[i], n) - 1;
         }
@@ -31,10 +31,10 @@ public class T2389 {
     }
 
     private int binarySearch(int[] pre, int query, int n) {
-        int left = 1, right = n;
+        int left = 1, right = n + 1;
         while (left < right) {
             int mid = left + (right - left) / 2;
-            if (pre[mid] < query) {
+            if (pre[mid] <= query) {
                 left = mid + 1;
             } else {
                 right = mid;
