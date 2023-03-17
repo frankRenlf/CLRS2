@@ -23,7 +23,8 @@ public class T2389 {
             pre[i + 1] = pre[i] + nums[i];
         }
         int[] ans = new int[n];
-        for (int i = 0; i < n; i++) {
+        int m=queries.length;
+        for (int i = 0; i < m; i++) {
             ans[i] = binarySearch(pre, queries[i], n) - 1;
         }
         return ans;
