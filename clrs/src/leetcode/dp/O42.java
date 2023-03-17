@@ -14,6 +14,13 @@ package leetcode.dp;
  */
 public class O42 {
     public int maxSubArray(int[] nums) {
-
+        int n = nums.length;
+        int[] dp = new int[n + 1];
+        int ret = nums[0];
+        for (int i = 0; i < n; i++) {
+            dp[i + 1] = Math.max(dp[i] + nums[i], nums[i]);
+            ret = Math.max(ret, dp[i + 1]);
+        }
+        return ret;
     }
 }
