@@ -13,5 +13,18 @@ package leetcode.dp;
  * @Description :
  */
 public class LCS01 {
-
+    public int leastMinutes(int n) {
+        int speed = 1;
+        int cost = 0;
+        while (n > 0) {
+            if (speed >= n) {
+                cost++;
+                n -= speed;
+            } else {
+                cost++;
+                speed *= 2;
+            }
+        }
+        return cost;
+    }
 }
