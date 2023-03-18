@@ -15,17 +15,17 @@ import java.util.Arrays;
  * @Description :
  */
 public class T698 {
-    public boolean canPartitionKSubsets_dp(int[] nums, int k) {
-        int sum = Arrays.stream(nums).sum();
-        if (sum % k != 0) {
-            return false;
-        }
-        int n = nums.length;
-        int per = sum / k;
-        if (nums[n - 1] > per) {
-            return false;
-        }
-    }
+//    public boolean canPartitionKSubsets_dp(int[] nums, int k) {
+//        int sum = Arrays.stream(nums).sum();
+//        if (sum % k != 0) {
+//            return false;
+//        }
+//        int n = nums.length;
+//        int per = sum / k;
+//        if (nums[n - 1] > per) {
+//            return false;
+//        }
+//    }
     public boolean canPartitionKSubsets(int[] nums, int k) {
         int sum = Arrays.stream(nums).sum();
         if (sum % k != 0) return false;
