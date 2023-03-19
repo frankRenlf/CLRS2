@@ -31,7 +31,14 @@ public class T313 {
                 }
             }
         }
+        System.out.println(Arrays.toString(dp));
         return dp[n];
+    }
+
+    static T313 t313 = new T313();
+
+    public static void main(String[] args) {
+        t313.nthSuperUglyNumber(12, new int[]{2, 7, 13, 19});
     }
 
 }
