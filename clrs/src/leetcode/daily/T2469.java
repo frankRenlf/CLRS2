@@ -14,6 +14,6 @@ package leetcode.daily;
  */
 public class T2469 {
     public double[] convertTemperature(double celsius) {
-        
+
     }
 }
