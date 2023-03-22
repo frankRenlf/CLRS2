@@ -28,6 +28,18 @@ public class T1626 {
                 return o1[0] != o2[0] ? o1[0] - o2[0] : o1[1] - o2[1];
             }
         });
+        int[] dp = new int[n];
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (person[j][1] <= person[i][1]) {
+                    dp[i] = Math.max(dp[i], dp[j]);
+                }
+            }
+            dp[i] += person[i][0];
+            ans = Math.max(ans, dp[i]);
+        }
+        return ans;
     }
 
 }
