@@ -55,5 +55,4 @@ public class T1630 {
         }
         return ans;
     }
-
 }
