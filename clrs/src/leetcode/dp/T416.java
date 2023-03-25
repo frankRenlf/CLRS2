@@ -55,7 +55,7 @@ public class T416 {
                     continue;
                 }
                 if (nums[j] < i) {
-                    dp[i][j] = dp[i][j - 1] || dp[i - nums[i]][j - 1];
+                    dp[i][j] = dp[i][j - 1] || dp[i - nums[j]][j - 1];
                 }
             }
         }
