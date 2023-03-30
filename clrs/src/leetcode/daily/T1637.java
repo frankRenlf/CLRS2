@@ -23,5 +23,4 @@ public class T1637 {
         }
         return mx;
     }
-
 }
