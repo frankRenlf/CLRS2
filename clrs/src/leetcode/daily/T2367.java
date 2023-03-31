@@ -13,7 +13,7 @@ import java.util.Set;
  * @createTime : 2023/3/31 22:02
  * @Email : sc19lr@leeds.ac.uk
  * @github : <a href="https://github.com/frankRenlf">...</a>
- * @Description :
+ * @Description : simple work in hospital
  */
 public class T2367 {
     public int arithmeticTriplets(int[] nums, int diff) {
