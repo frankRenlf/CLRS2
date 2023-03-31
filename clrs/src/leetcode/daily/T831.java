@@ -23,7 +23,21 @@ public class T831 {
     }
 
     private String dealNumber(String s) {
-        return null;
+        int n = 0;
+        StringBuilder num = new StringBuilder();
+        for (char c :
+                s.toCharArray()) {
+            if(Character.isDigit(c)){
+                n++;
+                num.append(c);
+            }
+        }
+        if (n == 10) return "***-***-" + num.substring(n - 4);
+        else if (n == 11) return "+*-***-***-" + num.substring(n - 4);
+        else if (n == 12) {
+            return "+**-***-***-" + num.substring(n - 4);
+        }
+        return "+***-***-***-" + num.substring(n - 4);
     }
 
     private String dealEmail(String s) {
@@ -34,6 +48,6 @@ public class T831 {
     static T831 t831 = new T831();
 
     public static void main(String[] args) {
-        System.out.println(t831.maskPII("AB@qq.com"));
+        System.out.println(t831.maskPII("86-(10)12345678"));
     }
 }
