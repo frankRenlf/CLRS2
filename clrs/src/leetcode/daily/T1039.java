@@ -18,7 +18,7 @@ public class T1039 {
     private int[] v;
     private int[][] memo;
 
-    public int minScoreTriangulation(int[] values) {
+    public int minScoreTriangulation_dfs(int[] values) {
         v = values;
         int n = v.length;
         memo = new int[n][n];
@@ -36,5 +36,15 @@ public class T1039 {
         return memo[i][j] = res;
     }
 
-
+    public int minScoreTriangulation_dp(int[] v) {
+        int n = v.length;
+        int[][] f = new int[n][n];
+        for (int i = n - 3; i >= 0; --i)
+            for (int j = i + 2; j < n; ++j) {
+                f[i][j] = Integer.MAX_VALUE;
+                for (int k = i + 1; k < j; ++k)
+                    f[i][j] = Math.min(f[i][j], f[i][k] + f[k][j] + v[i] * v[j] * v[k]);
+            }
+        return f[0][n - 1];
+    }
 }
