@@ -13,7 +13,7 @@ import java.util.Random;
  * @createTime : 2023/4/12 8:51
  * @Email : sc19lr@leeds.ac.uk
  * @github : <a href="https://github.com/frankRenlf">...</a>
- * @Description :
+ * @Description : hard level
  */
 public class T1147 {
     long[] pre1;
