@@ -12,7 +12,7 @@ import java.util.Random;
  * @Package : leetcode.daily
  * @createTime : 2023/4/12 8:51
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
+ * @github : <a href="https://github.com/frankRenlf">...</a>
  * @Description :
  */
 public class T1147 {
