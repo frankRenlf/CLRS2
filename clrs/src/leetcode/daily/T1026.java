@@ -67,6 +67,6 @@ public class T1026 {
         root.left = new TreeNode(1);
         root.left.left = new TreeNode(-1);
         root.right = new TreeNode(0);
-        System.out.println(t1026.maxAncestorDiff(root));
+        System.out.println(t1026.maxAncestorDiff_origin(root));
     }
 }
