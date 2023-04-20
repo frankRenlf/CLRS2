@@ -12,7 +12,7 @@ import java.util.TreeSet;
  * @Package : leetcode.daily
  * @createTime : 2023/4/20 10:49
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
+ * @github : <a href="https://github.com/frankRenlf">...</a>
  * @Description :
  */
 public class T1187 {
