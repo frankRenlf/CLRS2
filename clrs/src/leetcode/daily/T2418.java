@@ -1,5 +1,7 @@
 package leetcode.daily;
 
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  *
