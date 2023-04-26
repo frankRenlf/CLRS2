@@ -14,6 +14,10 @@ package leetcode.daily;
  */
 public class T1031 {
     public int maxSumTwoNoOverlap(int[] nums, int firstLen, int secondLen) {
+        return Math.max(order(nums, firstLen, secondLen), order(nums, secondLen, firstLen));
+    }
 
+    private int order(int[] nums, int len1, int len2) {
+        return 0;
     }
 }
