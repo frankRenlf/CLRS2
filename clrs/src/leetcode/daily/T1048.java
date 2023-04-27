@@ -14,7 +14,7 @@ import java.util.Map;
  * @createTime : 2023/4/27 16:10
  * @Email : sc19lr@leeds.ac.uk
  * @github : <a href="https://github.com/frankRenlf">...</a>
- * @Description :
+ * @Description : hard
  */
 public class T1048 {
     public int longestStrChain(String[] words) {
