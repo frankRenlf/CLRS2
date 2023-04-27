@@ -1,5 +1,10 @@
 package leetcode.daily;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.TreeSet;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -9,7 +14,7 @@ package leetcode.daily;
  * @Package : leetcode.daily
  * @createTime : 2023/4/28 7:58
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
+ * @github : <a href="https://github.com/frankRenlf">...</a>
  * @Description :
  */
 class DinnerPlates {
@@ -31,9 +36,8 @@ class DinnerPlates {
             stack.add(val);
             if (pos % capacity == 0) {
                 top.add(0);
-            }
-            else {
-                int stackPos = top.size()-1;
+            } else {
+                int stackPos = top.size() - 1;
                 int stackTop = top.get(stackPos);
                 top.set(stackPos, stackTop + 1);
             }
@@ -47,11 +51,11 @@ class DinnerPlates {
     }
 
     public int pop() {
-        while (!stack.isEmpty() && poppedPos.contains(stack.size()-1)) {
-            stack.remove(stack.size()-1);
+        while (!stack.isEmpty() && poppedPos.contains(stack.size() - 1)) {
+            stack.remove(stack.size() - 1);
             int pos = poppedPos.pollLast();
             if (pos % capacity == 0) {
-                top.remove(top.size()-1);
+                top.remove(top.size() - 1);
             }
         }
         if (stack.isEmpty()) {
@@ -60,7 +64,7 @@ class DinnerPlates {
             int pos = stack.size() - 1;
             int val = stack.get(pos);
             stack.remove(pos);
-            int index = top.size()-1;
+            int index = top.size() - 1;
             if (pos % capacity == 0) {
                 top.remove(index);
             } else {
@@ -84,5 +88,6 @@ class DinnerPlates {
         return stack.get(pos);
     }
 }
+
 public class T1172 {
 }
