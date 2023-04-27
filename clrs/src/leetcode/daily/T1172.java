@@ -15,7 +15,7 @@ import java.util.TreeSet;
  * @createTime : 2023/4/28 7:58
  * @Email : sc19lr@leeds.ac.uk
  * @github : <a href="https://github.com/frankRenlf">...</a>
- * @Description :
+ * @Description :hard
  */
 class DinnerPlates {
     int capacity;
