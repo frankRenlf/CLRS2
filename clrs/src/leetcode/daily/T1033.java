@@ -10,7 +10,7 @@ package leetcode.daily;
  * @createTime : 2023/4/30 8:59
  * @Email : sc19lr@leeds.ac.uk
  * @github : <a href="https://github.com/frankRenlf">...</a>
- * @Description :
+ * @Description : medium
  */
 public class T1033 {
     public int[] numMovesStones(int a, int b, int c) {
