@@ -11,7 +11,7 @@ import java.util.List;
  * @Package : leetcode.daily
  * @createTime : 2023/5/2 8:16
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
+ * @github : <a href="https://github.com/frankRenlf">...</a>
  * @Description :
  */
 public class T970 {
