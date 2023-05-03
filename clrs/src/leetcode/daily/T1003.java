@@ -1,7 +1,6 @@
 package leetcode.daily;
 
 import java.util.Objects;
-import java.util.Stack;
 
 /**
  * Created with IntelliJ IDEA.
