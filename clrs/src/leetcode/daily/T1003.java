@@ -1,5 +1,6 @@
 package leetcode.daily;
 
+import java.util.Objects;
 import java.util.Stack;
 
 /**
@@ -17,22 +18,14 @@ import java.util.Stack;
 public class T1003 {
     public boolean isValid(String s) {
         int n = s.length();
-        int k = 0;
-        int b = 0;
+        StringBuilder str = new StringBuilder();
         for (int i = 0; i < n; i++) {
             char c = s.charAt(i);
-            if (c == 'a') {
-                k++;
+            str.append(c);
+            if (str.length() >= 3 && Objects.equals(str.substring(str.length() - 3), "abc")) {
+                str.delete(str.length() - 3, str.length());
             }
-            if (c == 'c') {
-                k--;
-                b = 0;
-            }
-            if (c == 'b') {
-                b = b == 0 ? 1 : 0;
-            }
-            if (k < b) return false;
         }
-        return k == 0;
+        return str.isEmpty();
     }
 }
