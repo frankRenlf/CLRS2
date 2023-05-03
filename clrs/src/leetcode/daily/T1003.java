@@ -12,8 +12,8 @@ import java.util.Stack;
  * @Package : leetcode.daily
  * @createTime : 2023/5/3 9:29
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
- * @Description :
+ * @github : <a href="https://github.com/frankRenlf">...</a>
+ * @Description : medium
  */
 public class T1003 {
     public boolean isValid(String s) {
