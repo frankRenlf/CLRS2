@@ -9,8 +9,8 @@ package leetcode.daily;
  * @Package : leetcode.daily
  * @createTime : 2023/5/4 10:04
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
- * @Description :
+ * @github : <a href="https://github.com/frankRenlf">...</a>
+ * @Description : hard
  */
 public class T2106 {
     public int maxTotalFruits(int[][] fruits, int startPos, int k) {
