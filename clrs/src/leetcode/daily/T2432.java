@@ -9,11 +9,11 @@ package leetcode.daily;
  * @Package : leetcode.daily
  * @createTime : 2023/5/5 11:30
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
- * @Description :
+ * @github : <a href="https://github.com/frankRenlf">...</a>
+ * @Description : easy
  */
 public class T2432 {
     public int hardestWorker(int n, int[][] logs) {
-    
+
     }
 }
