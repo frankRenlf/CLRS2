@@ -1,5 +1,8 @@
 package leetcode.daily;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -14,6 +17,18 @@ package leetcode.daily;
  */
 public class T2432 {
     public int hardestWorker(int n, int[][] logs) {
-
+        int len = logs.length;
+        int[] cnt = new int[n];
+        cnt[logs[0][0]] = logs[0][1];
+        int ret = logs[0][0];
+        for (int i = 1; i < len; i++) {
+            cnt[logs[i][0]] = Math.max(logs[i][1] - logs[i - 1][1], cnt[logs[i][0]]);
+            if (cnt[logs[i][0]] > cnt[ret]) {
+                ret = logs[i][0];
+            } else if (cnt[logs[i][0]] == cnt[ret]) {
+                ret = Math.min(logs[i][0], ret);
+            }
+        }
+        return ret;
     }
 }
