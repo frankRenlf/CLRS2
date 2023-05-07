@@ -10,7 +10,7 @@ package leetcode.daily;
  * @createTime : 2023/5/7 8:34
  * @Email : sc19lr@leeds.ac.uk
  * @github : <a href="https://github.com/frankRenlf">...</a>
- * @Description :
+ * @Description : medium
  */
 public class T1010 {
     public int numPairsDivisibleBy60(int[] time) {
