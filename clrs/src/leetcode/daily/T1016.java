@@ -1,5 +1,8 @@
 package leetcode.daily;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created with IntelliJ IDEA.
  *
