@@ -1,5 +1,8 @@
 package leetcode.daily;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -14,6 +17,16 @@ package leetcode.daily;
  */
 public class T2441 {
     public int findMaxK(int[] nums) {
-        
+        Set<Integer> set = new HashSet<>();
+        int ret = 0;
+        for (int el :
+                nums) {
+            if (set.contains(-el)) {
+                ret = Math.max(ret, Math.abs(el));
+            } else {
+                set.add(el);
+            }
+        }
+        return ret;
     }
 }
