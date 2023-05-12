@@ -9,8 +9,8 @@ package leetcode.daily;
  * @Package : leetcode.daily
  * @createTime : 2023/5/12 8:26
  * @Email : sc19lr@leeds.ac.uk
- * @github : https://github.com/frankRenlf
- * @Description :
+ * @github : <a href="https://github.com/frankRenlf">...</a>
+ * @Description : hard
  */
 public class T1330 {
     public int maxValueAfterReverse(int[] nums) {
