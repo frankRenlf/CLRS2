@@ -18,7 +18,7 @@ import java.util.Set;
 public class T2441 {
     public int findMaxK(int[] nums) {
         Set<Integer> set = new HashSet<>();
-        int ret = 0;
+        int ret = -1;
         for (int el :
                 nums) {
             if (set.contains(-el)) {
