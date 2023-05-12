@@ -14,6 +14,6 @@ package leetcode.daily;
  */
 public class T2441 {
     public int findMaxK(int[] nums) {
-
+        
     }
 }
